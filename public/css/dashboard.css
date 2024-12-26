@@ -1,0 +1,325 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    height: 100vh;
+    display: flex;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #0056b3;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Header Styling */
+.header {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Content Styling */
+.content {
+    padding: 20px;
+    flex: 1;
+    background-color: #f9f9f9;
+}
+
+
+/* Basic Button Styles */
+.button, .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.button-primary, .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button-primary:hover, .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Secondary Button */
+.button-secondary, .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.button-secondary:hover, .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Success Button */
+.button-success, .btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.button-success:hover, .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Danger Button */
+.button-danger, .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.button-danger:hover, .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Warning Button */
+.button-warning, .btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.button-warning:hover, .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+/* Info Button */
+.button-info, .btn-info {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.button-info:hover, .btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+/* Light Button */
+.button-light, .btn-light {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.button-light:hover, .btn-light:hover {
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+/* Dark Button */
+.button-dark, .btn-dark {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.button-dark:hover, .btn-dark:hover {
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+/* Link Button */
+.button-link, .btn-link {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.button-link:hover, .btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Form Element Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Input Fields */
+.form-control {
+    display: block;
+    width: 50%;
+    padding: 12px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Textarea */
+textarea.form-control {
+    min-height: 120px;
+}
+
+/* Select Dropdown */
+.select-control {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.select-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Checkboxes */
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Radio Buttons */
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Label */
+label {
+    font-weight: bold;
+}
+
+/* Form Helper Text */
+.form-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.pull-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+/* General alert styles */
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+/* Success Alert Styles */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+/* Success alert icon (optional) */
+.alert-success::before {
+    content: '✓';
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Close Button */
+.alert .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Success alert hover effect */
+.alert-success:hover {
+    background-color: #c3e6cb;
+    border-color: #b1dfbb;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+}
